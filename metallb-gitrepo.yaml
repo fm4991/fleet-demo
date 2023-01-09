@@ -1,0 +1,16 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: fma-fleetdemo-metallb
+  namespace: fleet-default
+spec:
+  branch: main
+  insecureSkipTLSVerify: false
+  paths:
+  - metallb
+  repo: https://github.com/fm4991/fleet-demo.git
+  targets:
+  - clusterSelector:
+      matchLabels:
+        metallb: "yes"
+    name: metallb
