@@ -1,0 +1,15 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: l2-adv
+  namespace: metallb-system
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: fma-demo-cl1-vl86
+  namespace: metallb-system
+spec:
+  addresses:
+  - 172.24.86.45-172.24.86.49
