@@ -1,0 +1,14 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: fma-demo-cl1-fleet
+  namespace: fleet-default
+spec:
+  branch: main
+  forceSyncGeneration: 2
+  insecureSkipTLSVerify: false
+  paths:
+  - fma-demo-cl1
+  repo: https://github.com/fm4991/fleet-demo.git
+  targets:
+  - clusterName: fma-demo-cl1
