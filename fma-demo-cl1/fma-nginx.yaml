@@ -61,4 +61,4 @@ spec:
   - name: fma-nginx
     protocol: TCP
     port: 80
-    targetPot: 8080
+    targetPort: 8080
